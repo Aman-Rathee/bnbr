@@ -2,7 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
     background-color: black;
     color: white;
+}
+
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+        width: 0%;
+    }
+
+    .scrollbar:hover::-webkit-scrollbar {
+        width: 9px;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        background: rgb(35, 35, 35);
+        border-radius: 100vh;
+    }
 }
