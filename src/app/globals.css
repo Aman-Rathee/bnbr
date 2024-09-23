@@ -8,6 +8,10 @@ body {
 }
 
 @layer utilities {
+    .scrollbar-none::-webkit-scrollbar {
+        width: 0%;
+    }
+
     .scrollbar::-webkit-scrollbar {
         width: 0%;
     }

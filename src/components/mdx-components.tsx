@@ -24,7 +24,7 @@ const components = {
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        "font-heading mt-12 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0",
+        "font-heading mt-12 scroll-m-20 border-b border-[#313135] pb-2 text-2xl font-semibold tracking-tight first:mt-0",
         className
       )}
       {...props}
@@ -133,6 +133,22 @@ const components = {
       {...props}
     />
   ),
+  pre: ({
+    className,
+    ...props
+  }: React.HTMLAttributes<HTMLPreElement>) => {
+    return (
+      <>
+        <pre
+          className={cn(
+            "mt-2 p-4 scrollbar-none max-h-[650px] overflow-x-auto rounded-lg border-2 border-[#313135] !bg-[#18181b]",
+            className
+          )}
+          {...props}
+        />
+      </>
+    )
+  },
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
