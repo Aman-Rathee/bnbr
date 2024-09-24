@@ -9,18 +9,27 @@ body {
 
 @layer utilities {
     .scrollbar-none::-webkit-scrollbar {
+        scrollbar-width: none;
+    }
+
+    .scrollbar-primary::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .scrollbar-primary::-webkit-scrollbar-thumb {
+        background: rgb(35, 35, 35);
+        border-radius: 100vh;
+    }
+
+    .scrollbar-secondary::-webkit-scrollbar {
         width: 0%;
     }
 
-    .scrollbar::-webkit-scrollbar {
-        width: 0%;
+    .scrollbar-secondary:hover::-webkit-scrollbar {
+        width: 5px;
     }
 
-    .scrollbar:hover::-webkit-scrollbar {
-        width: 9px;
-    }
-
-    .scrollbar::-webkit-scrollbar-thumb {
+    .scrollbar-secondary::-webkit-scrollbar-thumb {
         background: rgb(35, 35, 35);
         border-radius: 100vh;
     }
