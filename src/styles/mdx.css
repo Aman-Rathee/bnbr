@@ -1,0 +1,13 @@
+[data-rehype-pretty-code-figure] {
+    @apply relative;
+}
+
+[data-rehype-pretty-code-figure] code {
+    @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0;
+    counter-reset: line;
+    box-decoration-break: clone;
+}
+
+[data-rehype-pretty-code-figure] [data-line] {
+    @apply p-0.5 pr-12;
+}
