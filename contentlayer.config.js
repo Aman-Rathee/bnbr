@@ -3,6 +3,8 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from "remark-gfm"
+import { visit } from "unist-util-visit"
+import { rehypeComponent } from "./src/components/lib/rehype-component"
 
 export const Doc = defineDocumentType(() => ({
     name: 'Doc',
@@ -24,16 +26,9 @@ const options = {
     onVisitLine(node) {
         // Prevent lines from collapsing in `display: grid` mode, and allow empty
         // lines to be copy/pasted
-        node.properties.style = (node.properties.style || '') + 'padding: 0.125rem 0px';
         if (node.children.length === 0) {
             node.children = [{ type: "text", value: " " }]
         }
-    },
-    onVisitHighlightedLine(node) {
-        node.properties.className.push("line--highlighted")
-    },
-    onVisitHighlightedWord(node) {
-        node.properties.className = ["word--highlighted"]
     },
 };
 
@@ -44,7 +39,37 @@ export default makeSource({
         remarkPlugins: [remarkGfm],
         rehypePlugins: [
             rehypeSlug,
+            rehypeComponent,
+            () => (tree) => {
+                visit(tree, (node) => {
+                    if (node?.type === "element" && node?.tagName === "pre") {
+                        const [codeEl] = node.children
+                        if (codeEl.tagName !== "code") {
+                            return
+                        }
+
+                        node.__rawString__ = codeEl.children?.[0].value
+                    }
+                })
+            },
             [rehypePrettyCode, options],
+            () => (tree) => {
+                visit(tree, (node) => {
+                    if (node?.type === "element" && node?.tagName === "figure") {
+
+                        if (!("data-rehype-pretty-code-figure" in node.properties)) {
+                            return
+                        }
+
+                        const preElement = node.children.at(-1)
+                        if (preElement.tagName !== "pre") {
+                            return
+                        }
+
+                        preElement.properties["__rawString__"] = node.__rawString__
+                    }
+                })
+            },
             [
                 rehypeAutolinkHeadings,
                 {
