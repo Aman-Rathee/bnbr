@@ -5,10 +5,9 @@ import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { useMDXComponent } from "next-contentlayer2/hooks"
-import { NpmCommands } from "types/unist"
-import { cn } from "@lib/utils"
+import { cn } from "@/lib/utils"
 import ComponentPreview from "./component-preview"
-import { CopyButton } from "@/ui/copy-button"
+import { CopyButton } from "@/components/copy-button"
 
 const components = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
