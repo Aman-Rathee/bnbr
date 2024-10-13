@@ -6,10 +6,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { useMDXComponent } from "next-contentlayer2/hooks"
 import { NpmCommands } from "types/unist"
-
-import { Event } from "@/lib/events"
-import { cn } from "./lib/utils"
+import { cn } from "@lib/utils"
 import ComponentPreview from "./component-preview"
+import { CopyButton } from "@/ui/copy-button"
 
 const components = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
@@ -135,8 +134,11 @@ const components = {
   ),
   pre: ({
     className,
+    __rawString__,
     ...props
-  }: React.HTMLAttributes<HTMLPreElement>) => {
+  }: React.HTMLAttributes<HTMLPreElement> & {
+    __rawString__?: string
+  }) => {
     return (
       <>
         <pre
@@ -146,6 +148,12 @@ const components = {
           )}
           {...props}
         />
+        {__rawString__ && (
+          <CopyButton
+            value={__rawString__}
+            className={cn("absolute right-8 top-4")}
+          />
+        )}
       </>
     )
   },

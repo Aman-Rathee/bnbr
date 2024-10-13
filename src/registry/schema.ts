@@ -23,7 +23,6 @@ export const registryEntrySchema = z.object({
     source: z.string().optional(),
     type: z.enum([
         "components:ui",
-        "components:component",
         "components:example",
     ]),
     category: z.string().optional(),
