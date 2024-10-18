@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --offset: 2px;
+}
+
 body {
     background-color: black;
     color: white;
@@ -32,5 +36,19 @@ body {
     .scrollbar-secondary::-webkit-scrollbar-thumb {
         background: rgb(35, 35, 35);
         border-radius: 100vh;
+    }
+
+    .animated-border::before {
+        background: radial-gradient(red, transparent 70%);
+        top: calc(0px + var(--offset));
+        left: calc(0px + var(--offset));
+        @apply absolute content-[''] w-[50%] rounded-full aspect-square z-[-2] animate-border-spin
+    }
+
+    .animated-border::after {
+        inset: var(--offset);
+        height: calc(100% -2 * var(--offset));
+        width: calc(100% -2 * var(--offset));
+        @apply absolute content-[''] bg-inherit rounded-[inherit] z-[-1]
     }
 }
