@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "name": "ButtonAnimatedBorder",
+    "dependencies": [],
+    "files": [
+      {
+        "path": "ui/ButtonAnimatedBorder.tsx",
+        "type": "components:ui"
+      }
+    ],
+    "type": "components:ui"
+  }
+]
