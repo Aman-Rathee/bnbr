@@ -5,45 +5,23 @@ import * as React from "react"
 
 export const Index: Record<string, any> = {
   "bnbr": {
-    "accordion": {
-      name: "accordion",
+    "ButtonAnimatedBorder": {
+      name: "ButtonAnimatedBorder",
       type: "components:ui",
       registryDependencies: undefined,
-      files: ["src/registry/bnbr/ui/accordion.tsx"],
-      component: React.lazy(() => import("@/registry/bnbr/ui/accordion.tsx")),
+      files: ["src/registry/bnbr/ui/ButtonAnimatedBorder.tsx"],
+      component: React.lazy(() => import("@/registry/bnbr/ui/ButtonAnimatedBorder.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
       chunks: []
     },
-    "button": {
-      name: "button",
-      type: "components:ui",
-      registryDependencies: undefined,
-      files: ["src/registry/bnbr/ui/button.tsx"],
-      component: React.lazy(() => import("@/registry/bnbr/ui/button.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "accordion-demo": {
-      name: "accordion-demo",
+    "ButtonAnimatedBorder-demo": {
+      name: "ButtonAnimatedBorder-demo",
       type: "components:example",
-      registryDependencies: ["accordion"],
-      files: ["src/registry/bnbr/example/accordion-demo.tsx"],
-      component: React.lazy(() => import("@/registry/bnbr/example/accordion-demo.tsx")),
-      source: "",
-      category: "undefined",
-      subcategory: "undefined",
-      chunks: []
-    },
-    "button-demo": {
-      name: "button-demo",
-      type: "components:example",
-      registryDependencies: ["button"],
-      files: ["src/registry/bnbr/example/button-demo.tsx"],
-      component: React.lazy(() => import("@/registry/bnbr/example/button-demo.tsx")),
+      registryDependencies: [""],
+      files: ["src/registry/bnbr/example/ButtonAnimatedBorder-demo.tsx"],
+      component: React.lazy(() => import("@/registry/bnbr/example/ButtonAnimatedBorder-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
