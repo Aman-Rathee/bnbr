@@ -8,6 +8,7 @@ import { useMDXComponent } from "next-contentlayer2/hooks"
 import { cn } from "@/lib/utils"
 import ComponentPreview from "./component-preview"
 import { CopyButton } from "@/components/copy-button"
+import { ComponentSource } from "@/components/component-source"
 
 const components = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
@@ -22,7 +23,7 @@ const components = {
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        "font-heading mt-12 scroll-m-20 border-b border-[#313135] pb-2 text-2xl font-semibold tracking-tight first:mt-0",
+        "font-heading mt-12 scroll-m-20 border-b border-border pb-2 text-2xl font-semibold tracking-tight first:mt-0",
         className
       )}
       {...props}
@@ -142,7 +143,7 @@ const components = {
       <>
         <pre
           className={cn(
-            "mt-2 p-4 scrollbar-none max-h-[650px] overflow-x-auto rounded-lg border-2 border-[#313135] !bg-[#18181b]",
+            "mt-2 p-4 scrollbar-none max-h-[650px] overflow-x-auto rounded-lg border-2 border-border !bg-[#18181b]",
             className
           )}
           {...props}
@@ -167,6 +168,7 @@ const components = {
   ),
   Image,
   ComponentPreview,
+  ComponentSource,
   CodeBlockWrapper: ({ ...props }) => (
     <CodeBlockWrapper className="rounded-md border" {...props} />
   ),
@@ -181,7 +183,7 @@ const components = {
   ),
   Steps: ({ ...props }) => (
     <div
-      className="[&>h3]:step steps mb-12 ml-4 border-l pl-8 [counter-reset:step]"
+      className="[&>h3]:step steps mb-12 ml-4 border-l border-border pl-8 [counter-reset:step]"
       {...props}
     />
   ),
