@@ -4,6 +4,7 @@
 
 :root {
     --offset: 2px;
+    --border-color: 49 49 53;
 }
 
 body {
@@ -12,6 +13,16 @@ body {
 }
 
 @layer utilities {
+    .step {
+        counter-increment: step;
+    }
+
+    .step:before {
+        @apply absolute w-9 bg-border h-9 rounded-full font-mono font-medium text-center text-base inline-flex items-center justify-center -indent-px border-4 border-black;
+        @apply ml-[-50px] mt-[-4px];
+        content: counter(step);
+    }
+
     .scrollbar-none::-webkit-scrollbar {
         scrollbar-width: none;
     }
@@ -49,6 +60,6 @@ body {
         inset: var(--offset);
         height: calc(100% -2 * var(--offset));
         width: calc(100% -2 * var(--offset));
-        @apply absolute content-[''] bg-inherit rounded-[inherit] z-[-1]
+        @apply absolute content-[''] bg-[inherit] rounded-[inherit] z-[-1]
     }
 }

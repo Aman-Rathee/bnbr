@@ -56,7 +56,7 @@ export default function ComponentPreview({ name, description, children, classNam
                 <Tabs defaultValue="preview" className="relative mr-auto w-full">
                     <div className="flex items-center justify-between pb-3">
                         {!hideCode && (
-                            <TabsList className="w-full justify-start rounded-none border-b-2 border-[#313135] bg-transparent p-0">
+                            <TabsList className="w-full justify-start rounded-none border-b-2 border-border bg-transparent p-0">
                                 <TabsTrigger value="preview" className="text-base">
                                     Preview
                                 </TabsTrigger>
@@ -66,7 +66,7 @@ export default function ComponentPreview({ name, description, children, classNam
                             </TabsList>
                         )}
                     </div>
-                    <TabsContent value="preview" className="relative rounded-md border-2 border-[#313135]">
+                    <TabsContent value="preview" className="relative rounded-md border-2 border-border">
                         <div className="flex items-center justify-end pr-8 pt-4">
                             <div className="flex items-center gap-2">
                                 <CopyButton

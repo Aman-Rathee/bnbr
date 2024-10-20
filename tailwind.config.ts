@@ -13,6 +13,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        border: 'rgb(var(--border-color))',
+      },
       keyframes: {
         'border-spin': {
           '0%': {
