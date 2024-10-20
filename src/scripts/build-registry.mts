@@ -4,8 +4,8 @@ import path from "path"
 import { Project } from "ts-morph"
 import { tmpdir } from "os"
 import { rimraf } from "rimraf"
-import { registry } from "@registry"
-import { Registry, registrySchema } from "@registry/schema"
+import { registry } from "@/registry"
+import { Registry, registrySchema } from "@/registry/schema"
 
 const REGISTRY_PATH = path.join(process.cwd(), "public/registry")
 
@@ -87,7 +87,7 @@ export const Index: Record<string, any> = {
     // Build registry/index.json.
     // ----------------------------------------------------------------------------
     const items = registry
-        .filter((item) => ["registry:ui"].includes(item.type))
+        .filter((item) => ["components:ui"].includes(item.type))
         .map((item) => {
             return {
                 ...item,

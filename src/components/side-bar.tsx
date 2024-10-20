@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { DocsConfig, SidebarNavItem } from "./ui/config/docs"
+import { DocsConfig, SidebarNavItem } from "./config/docs"
 
 export interface DocsSidebarNavProps {
   config: DocsConfig

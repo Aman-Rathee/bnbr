@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
-import { docsConfig } from '@/components/ui/config/docs';
+import { docsConfig } from '@/components/config/docs';
 import { DocsSidebarNav } from '@/components/side-bar';
 
 

@@ -4,7 +4,7 @@ import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from "remark-gfm"
 import { visit } from "unist-util-visit"
-import { rehypeComponent } from "@lib/rehype-component"
+import { rehypeComponent } from "@/lib/rehype-component"
 
 export const Doc = defineDocumentType(() => ({
     name: 'Doc',
