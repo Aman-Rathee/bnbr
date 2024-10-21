@@ -1,0 +1,99 @@
+---
+title: Button Animated Border
+description: A border that moves around the Button. Add a touch of visual interest to your website with our animated border button component.
+date: 2021-12-24
+---
+
+<ComponentPreview
+  name="ButtonAnimatedBorder-demo"
+  description="Animated border of Button"
+/>
+
+<Steps>
+
+<Step>Add util file</Step>
+
+```ts title="lib/utils.ts"
+import { clsx, ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+```
+
+<Step>Copy and paste the code into your project.</Step>
+
+components/ButtonAnimatedBorder.tsx
+
+<ComponentSource name="ButtonAnimatedBorder" />
+
+<Step>Update the imports paths to match your project setup.</Step>
+
+<Step>Add util file</Step>
+
+```css title="global.css"  {2-14}
+@layer utilities {
+  .animated-border::before {
+    background: radial-gradient(red, transparent 70%);
+    top: calc(0px + var(--offset));
+    left: calc(0px + var(--offset));
+    @apply absolute content-[''] w-[50%] rounded-full aspect-square z-[-2] animate-border-spin;
+  }
+
+  .animated-border::after {
+    inset: var(--offset);
+    height: calc(100% -2 * var(--offset));
+    width: calc(100% -2 * var(--offset));
+    @apply absolute content-[''] bg-[inherit] rounded-[inherit] z-[-1];
+  }
+}
+```
+
+<Step>Update `tailwind.config.js`</Step>
+
+Add the following animations to your `tailwind.config.js` file:
+
+```js title="tailwind.config.js" {5-36}
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    extend: {
+      keyframes: {
+        "border-spin": {
+          "0%": {
+            left: "0%",
+            top: "0%",
+            transform: "translate(-50%, -50%)",
+          },
+          "38%": {
+            left: "100%",
+            top: "0%",
+            transform: "translate(-50%, -50%)",
+          },
+          "50%": {
+            left: "100%",
+            top: "100%",
+            transform: "translate(-50%, -50%)",
+          },
+          "88%": {
+            left: "0%",
+            top: "100%",
+            transform: "translate(-50%, -50%)",
+          },
+          "100%": {
+            left: "0%",
+            top: "0%",
+            transform: "translate(-50%, -50%)",
+          },
+        },
+      },
+      animation: {
+        "border-spin": "border-spin 5s linear infinite",
+      },
+    },
+  },
+};
+```
+
+</Steps>

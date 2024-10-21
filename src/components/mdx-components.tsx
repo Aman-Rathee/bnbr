@@ -149,7 +149,7 @@ const components = {
       <>
         <pre
           className={cn(
-            "mt-2 p-4 scrollbar-none max-h-[650px] overflow-x-auto rounded-lg border-2 border-border !bg-[#18181b]",
+            "mt-2 p-4 scrollbar-none max-h-[580px] overflow-x-auto rounded-lg border-2 border-border !bg-[#18181b]",
             className
           )}
           {...props}
