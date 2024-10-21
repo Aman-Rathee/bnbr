@@ -135,9 +135,15 @@ const components = {
   pre: ({
     className,
     __rawString__,
+    __withMeta__,
+    __src__,
+    __event__,
     ...props
   }: React.HTMLAttributes<HTMLPreElement> & {
     __rawString__?: string
+    __withMeta__?: boolean
+    __src__?: string
+    __event__?: Event["name"]
   }) => {
     return (
       <>
@@ -151,7 +157,9 @@ const components = {
         {__rawString__ && (
           <CopyButton
             value={__rawString__}
-            className={cn("absolute right-8 top-4")}
+            src={__src__}
+            event={__event__}
+            className={cn("absolute right-8 top-4", __withMeta__ && "top-16")}
           />
         )}
       </>

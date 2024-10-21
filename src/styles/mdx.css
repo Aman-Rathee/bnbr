@@ -9,7 +9,7 @@
 }
 
 [data-rehype-pretty-code-figure] [data-line] {
-    @apply p-0.5 pr-12;
+        @apply p-px;
 }
 
 [data-rehype-pretty-code-figure] .line {

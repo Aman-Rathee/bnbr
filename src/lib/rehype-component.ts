@@ -84,7 +84,6 @@ export function rehypeComponent() {
                             tagName: "pre",
                             properties: {
                                 __src__: src,
-                                __style__: 'bnbr',
                             },
                             attributes: [
                                 {
@@ -142,7 +141,9 @@ export function rehypeComponent() {
                     node.children?.push(
                         u("element", {
                             tagName: "pre",
-                            properties: {},
+                            properties: {
+                                __src__: src,
+                            },
                             children: [
                                 u("element", {
                                     tagName: "code",
