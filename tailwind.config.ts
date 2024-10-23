@@ -1,4 +1,10 @@
 import type { Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
+
+import svgToDataUri from "mini-svg-data-uri";
+
+
+const { default: flattenColorPalette, } = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config: Config = {
   content: [
@@ -50,6 +56,19 @@ const config: Config = {
       }
     }
   },
-  plugins: [],
+  plugins: [
+    function ({ matchUtilities, theme }: any) {
+      matchUtilities(
+        {
+          "bg-grid": (value: any) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="${value}"><path d="M31.5 0L31.5 32M32 31.5L0 31.5" /></svg>`
+            )}")`,
+          }),
+        },
+        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+      );
+    }
+  ],
 };
 export default config;
