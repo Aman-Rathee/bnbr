@@ -4,7 +4,7 @@
     "dependencies": [],
     "files": [
       {
-        "path": "ui/ButtonAnimatedBorder.tsx",
+        "path": "ui/button-animated-border.tsx",
         "type": "components:ui"
       }
     ],

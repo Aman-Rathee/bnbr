@@ -5,6 +5,6 @@ export const ui: Registry = [
         name: "ButtonAnimatedBorder",
         type: "components:ui",
         dependencies: [],
-        files: ["ui/ButtonAnimatedBorder.tsx"],
+        files: ["ui/button-animated-border.tsx"],
     },
 ]

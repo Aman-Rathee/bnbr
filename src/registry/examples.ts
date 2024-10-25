@@ -2,9 +2,9 @@ import { Registry } from "./schema";
 
 export const examples: Registry = [
     {
-        name: "ButtonAnimatedBorder-demo",
+        name: "ButtonAnimatedBorderDemo",
         type: "components:example",
         registryDependencies: [""],
-        files: ["example/ButtonAnimatedBorder-demo.tsx"],
+        files: ["example/button-animated-border-demo.tsx"],
     },
 ]

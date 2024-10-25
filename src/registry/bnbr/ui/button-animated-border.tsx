@@ -9,4 +9,4 @@ const ButtonAnimatedBorder = ({ children, className, ...props }: { children?: Re
     );
 };
 
-export default ButtonAnimatedBorder;
+export { ButtonAnimatedBorder }

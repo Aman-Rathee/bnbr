@@ -34,8 +34,8 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       items: [
         {
-          title: "ButtonAnimatedBorder",
-          href: "/components/ButtonAnimatedBorder",
+          title: "Button Animated Border",
+          href: "/components/button-animated-border",
           items: [],
         },
       ],
