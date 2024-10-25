@@ -1,12 +1,9 @@
 import React from 'react'
 import { allDocs } from 'contentlayer/generated'
-import { ChevronRightIcon } from "@radix-ui/react-icons"
-import Button from '@/components/Button'
-import { cn } from '@/components/lib/utils'
+import { cn } from '@/lib/utils'
 import { notFound } from 'next/navigation'
-import type { MDXComponents } from 'mdx/types'
-import Link from 'next/link'
 import { Mdx } from '@/components/mdx-components'
+import "@/styles/mdx.css"
 
 
 interface DocsPageProps {
@@ -14,13 +11,6 @@ interface DocsPageProps {
         slug: string[]
     }
 }
-const mdxComponents: MDXComponents = {
-    // Override the default <a> element to use the next/link component.
-    a: ({ href, children }) => <Link href={href as string}>{children}</Link>,
-    // Add a custom component.
-    MyComponent: () => <div>Hello World!</div>,
-}
-
 
 function getDocFromParams({ params }: DocsPageProps) {
     const slug = params.slug?.join("/") || ""
