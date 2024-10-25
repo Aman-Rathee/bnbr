@@ -38,6 +38,11 @@ export const docsConfig: DocsConfig = {
           href: "/components/button-animated-border",
           items: [],
         },
+        {
+          title: "Grid and Dot Backgrounds",
+          href: "/components/grid-and-dot-background",
+          items: [],
+        },
       ],
     },
   ]

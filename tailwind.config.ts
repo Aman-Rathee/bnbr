@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-
 import svgToDataUri from "mini-svg-data-uri";
 
 
