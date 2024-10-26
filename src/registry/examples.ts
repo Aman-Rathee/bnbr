@@ -8,9 +8,15 @@ export const examples: Registry = [
         files: ["example/button-animated-border-demo.tsx"],
     },
     {
-        name: "GridAndDotBackgroundDemo",
+        name: "GridBackgroundDemo",
         type: "components:example",
         registryDependencies: [""],
-        files: ["example/grid-and-dot-background-demo.tsx"],
+        files: ["example/grid-background-demo.tsx"],
+    },
+    {
+        name: "DotBackgroundDemo",
+        type: "components:example",
+        registryDependencies: [""],
+        files: ["example/dot-background-demo.tsx"],
     },
 ]

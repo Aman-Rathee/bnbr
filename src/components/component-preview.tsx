@@ -53,7 +53,7 @@ export default function ComponentPreview({ name, description, children, classNam
                 className={cn("relative mb-16 flex flex-col space-y-2", className)}
                 {...props}
             >
-                <Tabs defaultValue="preview" className="relative mr-auto w-full">
+                <Tabs defaultValue="preview" className="relative pt-2 mr-auto w-full">
                     <div className="flex items-center justify-between pb-3">
                         {!hideCode && (
                             <TabsList className="w-full justify-start rounded-none border-b-2 border-border bg-transparent p-0">

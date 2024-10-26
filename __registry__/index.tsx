@@ -27,12 +27,23 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "GridAndDotBackgroundDemo": {
-      name: "GridAndDotBackgroundDemo",
+    "GridBackgroundDemo": {
+      name: "GridBackgroundDemo",
       type: "components:example",
       registryDependencies: [""],
-      files: ["src/registry/bnbr/example/grid-and-dot-background-demo.tsx"],
-      component: React.lazy(() => import("@/registry/bnbr/example/grid-and-dot-background-demo.tsx")),
+      files: ["src/registry/bnbr/example/grid-background-demo.tsx"],
+      component: React.lazy(() => import("@/registry/bnbr/example/grid-background-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "DotBackgroundDemo": {
+      name: "DotBackgroundDemo",
+      type: "components:example",
+      registryDependencies: [""],
+      files: ["src/registry/bnbr/example/dot-background-demo.tsx"],
+      component: React.lazy(() => import("@/registry/bnbr/example/dot-background-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
