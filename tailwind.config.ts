@@ -68,6 +68,11 @@ const config: Config = {
               `<svg width="18" height="18" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5" fill="${value}"/></svg>`
             )}")`,
           }),
+          "bg-wave": (value: any) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg width='70' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'><path d='M 0 10 Q 25 0, 50 10 Q 75 20, 100 10' fill='none' stroke='${value}' stroke-width='1'/></svg>`
+            )}")`,
+          }),
         },
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );

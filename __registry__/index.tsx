@@ -49,5 +49,16 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "WaveBackgroundDemo": {
+      name: "WaveBackgroundDemo",
+      type: "components:example",
+      registryDependencies: [""],
+      files: ["src/registry/bnbr/example/wave-background-demo.tsx"],
+      component: React.lazy(() => import("@/registry/bnbr/example/wave-background-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
   },
 }
