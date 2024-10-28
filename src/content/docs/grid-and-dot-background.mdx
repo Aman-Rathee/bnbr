@@ -6,13 +6,19 @@ date: 2021-12-24
 
 <ComponentPreview name="GridBackgroundDemo" description="Grid Background" />
 
+## Installation
+
+```bash
+npm i mini-svg-data-uri
+```
+
 <Steps>
 
 <Step>Update `tailwind.config.js`</Step>
 
 Add the following code to your `tailwind.config.js` file:
 
-```js title="tailwind.config.js" {1-3}, {12-28}
+```js title="tailwind.config.js" {1-5}, {12-26}
 import svgToDataUri from "mini-svg-data-uri";
 // You'll notice it's using CommonJS require syntax instead of ES Modules import. The reason for this is that this utility is part of Tailwind's internal utilities which are primarily written in CommonJS format.
 const {
@@ -34,11 +40,6 @@ module.exports = {
               `<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="${value}"><path d="M31.5 0L31.5 32M32 31.5L0 31.5" /></svg>`
             )}")`,
           }),
-          "bg-dot": (value: any) => ({
-            backgroundImage: `url("${svgToDataUri(
-              `<svg width="18" height="18" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5" fill="${value}"/></svg>`
-            )}")`,
-          }),
         },
         { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
       );
@@ -55,4 +56,81 @@ module.exports = {
 
 <ComponentPreview name="DotBackgroundDemo" description="Dot Background" />
 
+<Steps>
+
+<Step>Update `tailwind.config.js`</Step>
+
+Add the following code to your `tailwind.config.js` file:
+
+```js title="tailwind.config.js" {1-5}, {12-26}
+import svgToDataUri from "mini-svg-data-uri";
+
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    // rest of the code
+  },
+  plugins: [
+    // rest of the code
+    function ({ matchUtilities, theme }: any) {
+      matchUtilities(
+        {
+          "bg-dot": (value: any) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg width="18" height="18" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="5" fill="${value}"/></svg>`
+            )}")`,
+          }),
+        },
+        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+      );
+    },
+  ],
+};
+```
+
+</Steps>
+
+### Wave Background
+
 <ComponentPreview name="WaveBackgroundDemo" description="Dot Background" />
+<Steps>
+
+<Step>Update `tailwind.config.js`</Step>
+
+Add the following code to your `tailwind.config.js` file:
+
+```js title="tailwind.config.js" {1-5}, {12-26}
+import svgToDataUri from "mini-svg-data-uri";
+
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  theme: {
+    // rest of the code
+  },
+  plugins: [
+    // rest of the code
+    function ({ matchUtilities, theme }: any) {
+      matchUtilities(
+        {
+          "bg-wave": (value: any) => ({
+            backgroundImage: `url("${svgToDataUri(
+              `<svg width='70' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'><path d='M 0 10 Q 25 0, 50 10 Q 75 20, 100 10' fill='none' stroke='${value}' stroke-width='1'/></svg>`
+            )}")`,
+          }),
+        },
+        { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+      );
+    },
+  ],
+};
+```
+
+</Steps>
