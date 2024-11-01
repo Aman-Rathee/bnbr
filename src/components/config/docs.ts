@@ -34,6 +34,11 @@ export const docsConfig: DocsConfig = {
       title: "Components",
       items: [
         {
+          title: "Background Gradient",
+          href: "/components/bg-gradient",
+          items: [],
+        },
+        {
           title: "Button Animated Border",
           href: "/components/button-animated-border",
           items: [],

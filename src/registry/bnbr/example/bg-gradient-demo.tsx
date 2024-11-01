@@ -1,7 +1,7 @@
 import { BgGradient } from '@/registry/bnbr/ui/bg-gradient'
 import Image from 'next/image.js'
 
-function Page() {
+function BgGradientDemo() {
   return (
     <BgGradient className=''>
       <div className="space-y-4">
@@ -22,4 +22,4 @@ function Page() {
   )
 }
 
-export default Page
+export default BgGradientDemo

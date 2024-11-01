@@ -25,4 +25,10 @@ export const examples: Registry = [
         registryDependencies: [""],
         files: ["example/wave-background-demo.tsx"],
     },
+    {
+        name: "BgGradientDemo",
+        type: "components:example",
+        registryDependencies: [""],
+        files: ["example/bg-gradient-demo.tsx"],
+    },
 ]
