@@ -3,43 +3,14 @@
 import React, { useEffect, useState } from 'react'
 import { animate, AnimationPlaybackControls, motion, useMotionValue } from "framer-motion"
 import useMeasure from 'react-use-measure';
+import { cn } from '@/lib/utils';
 
-const cardsData = [
-    {
-        heading: "Responsive",
-        paragraph: "Learn how to create responsive layouts that adapt seamlessly to various devices and screen sizes."
-    },
-    {
-        heading: "Animations",
-        paragraph: "Discover techniques to implement smooth animations and transitions to enhance user interactions."
-    },
-    {
-        heading: "Accessibility",
-        paragraph: "Explore the best practices to ensure your web applications are accessible to all users and devices."
-    },
-    {
-        heading: "State",
-        paragraph: "Master state management patterns that simplify data flow and ensure a maintainable codebase."
-    },
-    {
-        heading: "Styling",
-        paragraph: "Understand modern approaches to component styling for scalable, consistent design systems."
-    },
-    {
-        heading: "Server-Side",
-        paragraph: "Learn the benefits of server-side rendering and how it improves performance and SEO."
-    },
-    {
-        heading: "API",
-        paragraph: "Explore techniques for integrating APIs seamlessly into your web applications with ease."
-    },
-    {
-        heading: "Testing",
-        paragraph: "Understand different testing strategies to improve code quality and user experience consistently."
-    }
-];
+interface cardProps {
+    heading: string,
+    paragraph: string
+}
 
-export const Marquee = () => {
+export const Marquee = ({ cardsData, className }: { cardsData: cardProps[], className: string }) => {
     let [containerRef, { width }] = useMeasure()
     const xTranslation = useMotionValue(0);
     let controls: AnimationPlaybackControls;
@@ -74,9 +45,10 @@ export const Marquee = () => {
     }, [xTranslation, width, duration, rerender])
 
     return (
-        <div className='relative w-11/12 mx-auto overflow-hidden' style={{ height: '300px' }}>
+        <div className={cn('relative w-11/12 mx-auto overflow-hidden h-80', className)}>
             <h1 className='text-center text-4xl font-bold'>Heading</h1>
             <div className='absolute inset-0 flex items-center'>
+                <div className='before:h-full before:w-44 before:z-[2] before:absolute before:bg-gradient-to-r before:from-black before:to-transparent before:top-0 before:left-0 after:h-full after:w-44 after:z-[2] after:absolute after:bg-gradient-to-l after:from-black after:to-transparent after:top-0 after:right-0'></div>
                 <motion.div
                     className='flex gap-5'
                     ref={containerRef}
@@ -100,14 +72,10 @@ export const Marquee = () => {
 }
 
 
-interface CardProps {
-    heading: string,
-    paragraph: string
-}
-export function Card({ heading, paragraph }: CardProps) {
+export function Card({ heading, paragraph }: cardProps) {
     return (
         <>
-            <motion.div className='w-56 p-5 bg-slate-700 rounded-lg'>
+            <motion.div className='w-56 p-5 bg-sky-950 rounded-lg'>
                 <h1 className='text-lg text-gray-200 font-bold'>{heading}</h1>
                 <p className='text-gray-300'>{paragraph}</p>
             </motion.div>
