@@ -48,6 +48,11 @@ export const docsConfig: DocsConfig = {
           href: "/components/grid-and-dot-background",
           items: [],
         },
+        {
+          title: "Marquee Animation",
+          href: "/components/marquee-animation",
+          items: [],
+        },
       ],
     },
   ]
