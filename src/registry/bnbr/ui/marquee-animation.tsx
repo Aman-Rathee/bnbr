@@ -10,7 +10,7 @@ interface cardProps {
     paragraph: string
 }
 
-export const Marquee = ({ cardsData, className }: { cardsData: cardProps[], className: string }) => {
+function Marquee({ cardsData, className }: { cardsData: cardProps[], className: string }) {
     let [containerRef, { width }] = useMeasure()
     const xTranslation = useMotionValue(0);
     let controls: AnimationPlaybackControls;
@@ -72,7 +72,7 @@ export const Marquee = ({ cardsData, className }: { cardsData: cardProps[], clas
 }
 
 
-export function Card({ heading, paragraph }: cardProps) {
+function Card({ heading, paragraph }: cardProps) {
     return (
         <>
             <motion.div className='w-56 p-5 bg-sky-950 rounded-lg'>
@@ -82,3 +82,5 @@ export function Card({ heading, paragraph }: cardProps) {
         </>
     )
 }
+
+export { Marquee, Card }

@@ -27,6 +27,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
+    "marquee-animation": {
+      name: "marquee-animation",
+      type: "components:ui",
+      registryDependencies: undefined,
+      files: ["src/registry/bnbr/ui/marquee-animation.tsx"],
+      component: React.lazy(() => import("@/registry/bnbr/ui/marquee-animation.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
     "ButtonAnimatedBorderDemo": {
       name: "ButtonAnimatedBorderDemo",
       type: "components:example",
@@ -77,6 +88,17 @@ export const Index: Record<string, any> = {
       registryDependencies: [""],
       files: ["src/registry/bnbr/example/bg-gradient-demo.tsx"],
       component: React.lazy(() => import("@/registry/bnbr/example/bg-gradient-demo.tsx")),
+      source: "",
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: []
+    },
+    "marquee-animation-demo": {
+      name: "marquee-animation-demo",
+      type: "components:example",
+      registryDependencies: [""],
+      files: ["src/registry/bnbr/example/marquee-animation-demo.tsx"],
+      component: React.lazy(() => import("@/registry/bnbr/example/marquee-animation-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

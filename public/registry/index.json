@@ -20,5 +20,16 @@
       }
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "marquee-animation",
+    "dependencies": [],
+    "files": [
+      {
+        "path": "ui/marquee-animation.tsx",
+        "type": "components:ui"
+      }
+    ],
+    "type": "components:ui"
   }
 ]

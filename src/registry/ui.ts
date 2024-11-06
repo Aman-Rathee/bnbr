@@ -13,4 +13,10 @@ export const ui: Registry = [
         dependencies: [],
         files: ["ui/bg-gradient.tsx"],
     },
+    {
+        name: "marquee-animation",
+        type: "components:ui",
+        dependencies: [],
+        files: ["ui/marquee-animation.tsx"],
+    },
 ]
