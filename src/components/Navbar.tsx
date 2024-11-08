@@ -11,8 +11,8 @@ export default function Navbar() {
                     <Link href={'/'} className='flex items-center space-x-3'>
                         <Image
                             src='/brand-logo.png'
-                            alt="B"
-                            className=""
+                            alt="Bnbr"
+                            style={{ width: "auto", height: "auto" }}
                             height={30}
                             width={30}
                         />
