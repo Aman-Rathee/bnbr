@@ -4,6 +4,13 @@ import React from 'react'
 
 export default function Navbar() {
 
+    const routes = [
+        { title: 'Components', link: '/components' },
+        { title: 'Template', link: '/template' },
+        { title: 'Docs', link: '/docs' },
+        { title: 'Themes', link: '/themes' },
+    ]
+
     return (
         <>
             <header className='sticky top-0 h-16 z-10 flex justify-center backdrop-blur'>
@@ -18,18 +25,15 @@ export default function Navbar() {
                         />
                         <div className='text-xl font-bold'>Bnbr UI</div>
                     </Link>
-                    <>
-                        <nav className="flex text-gray-300/75">
-                            <Link className='px-2 duration-100 hover:text-white hover:-translate-y-0.5 hover:translate-x-px hover:scale-105 ' href={'/components'}>Components</Link>
-                            <Link className='px-2 duration-100 hover:text-white hover:-translate-y-0.5 hover:translate-x-px hover:scale-105 ' href={'/template'}>Template</Link>
-                            <Link className='px-2 duration-100 hover:text-white hover:-translate-y-0.5 hover:translate-x-px hover:scale-105 ' href={'/docs'}>Docs</Link>
-                            <Link className='px-2 duration-100 hover:text-white hover:-translate-y-0.5 hover:translate-x-px hover:scale-105 ' href={'/themes'}>Themes</Link>
-                        </nav>
-                        <div className="flex text-white items-center space-x-2">
-                            <Link className='px-2 duration-300 hover:opacity-60' href={'https://github.com/Aman-Rathee'} target='_blank'>Github</Link>
-                            <Link className='px-2 duration-300 hover:opacity-60' href={'https://x.com/AmnRathee'} target='_blank'>Twitter</Link>
-                        </div>
-                    </>
+                    <nav className="flex">
+                        {routes.map((route) => (
+                            <Link key={route.title} className='px-2 duration-100 text-gray-400 hover:font-bold hover:text-white hover:scale-105 ' href={route.link}>{route.title}</Link>
+                        ))}
+                    </nav>
+                    <div className="flex text-white items-center space-x-2">
+                        <Link className='px-2 duration-300 hover:opacity-60' href={'https://github.com/Aman-Rathee'} target='_blank'>Github</Link>
+                        <Link className='px-2 duration-300 hover:opacity-60' href={'https://x.com/AmnRathee'} target='_blank'>Twitter</Link>
+                    </div>
                 </div>
             </header>
         </>
