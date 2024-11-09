@@ -16,12 +16,12 @@ const Hero = () => {
 
     return (
         <>
-            <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-br from-black from-30% to-violet-950 text-white">
+            <div className="min-h-[calc(100vh-4rem)] bg-black text-white">
                 <main className="container mx-auto px-4 py-32">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.4 }}
                         className="text-4xl md:text-6xl font-bold text-center mb-8"
                     >
                         Bring Your websites to Life with <span className='text-violet-600'> BnbrUI </span>
@@ -30,8 +30,8 @@ const Hero = () => {
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-xl text-center mb-12"
+                        transition={{ duration: 0.4, delay: 0.2 }}
+                        className="text-xl text-center text-gray-400 mb-12"
                     >
                         Copy and paste beautifully animated components into your website, styled with Tailwind CSS and Framer Motion for a seamless user experience.
                     </motion.p>
@@ -39,7 +39,7 @@ const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
+                        transition={{ duration: 0.4, delay: 0.4 }}
                         className="flex justify-center space-x-4 mb-16"
                     >
                         <Link
@@ -66,9 +66,9 @@ const Hero = () => {
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className="bg-white bg-opacity-10 p-6 rounded-lg"
                             >
-                                <div className="text-purple-300 mb-4">{feature.icon}</div>
-                                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                                <p className="text-purple-200">{feature.description}</p>
+                                <div className="text-purple-400 mb-4">{feature.icon}</div>
+                                <h3 className="text-xl text-purple-200 font-semibold mb-2">{feature.title}</h3>
+                                <p className="text-gray-400">{feature.description}</p>
                             </motion.div>
                         ))}
                     </div>
