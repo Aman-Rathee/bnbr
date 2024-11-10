@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
+import MobileNav from './mobile-nav';
 
 export default function Navbar() {
 
@@ -13,7 +14,7 @@ export default function Navbar() {
 
     return (
         <>
-            <header className='sticky top-0 h-16 z-10 flex justify-center backdrop-blur'>
+            <header className='sticky px-4 top-0 h-16 z-10 flex justify-center backdrop-blur'>
                 <div className="flex w-full items-center justify-between md:max-w-screen-xl">
                     <Link href={'/'} className='flex items-center space-x-3'>
                         <Image
@@ -25,7 +26,7 @@ export default function Navbar() {
                         />
                         <div className='text-xl font-bold'>Bnbr UI</div>
                     </Link>
-                    <nav className="flex">
+                    <nav className="hidden sm:block">
                         {routes.map((route) => (
                             <Link key={route.title} className='px-2 duration-100 text-gray-400 hover:font-bold hover:text-white hover:scale-105 ' href={route.link}>{route.title}</Link>
                         ))}
@@ -33,6 +34,7 @@ export default function Navbar() {
                     <div className="flex text-white items-center space-x-2">
                         <Link className='px-2 duration-300 hover:opacity-60' href={'https://github.com/Aman-Rathee'} target='_blank'>Github</Link>
                         <Link className='px-2 duration-300 hover:opacity-60' href={'https://x.com/AmnRathee'} target='_blank'>Twitter</Link>
+                        <MobileNav routes={routes} />
                     </div>
                 </div>
             </header>
