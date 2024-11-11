@@ -7,9 +7,6 @@ export default function Navbar() {
 
     const routes = [
         { title: 'Components', link: '/components' },
-        { title: 'Template', link: '/template' },
-        { title: 'Docs', link: '/docs' },
-        { title: 'Themes', link: '/themes' },
     ]
 
     return (
