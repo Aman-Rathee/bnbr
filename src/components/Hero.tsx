@@ -16,8 +16,8 @@ const Hero = () => {
 
     return (
         <>
-            <div className="min-h-[calc(100vh-4rem)] bg-black text-white">
-                <main className="container mx-auto px-4 py-32">
+            <div className="bg-black text-white">
+                <main className="container mx-auto px-4 py-16 md:py-32">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

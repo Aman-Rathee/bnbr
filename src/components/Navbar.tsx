@@ -11,7 +11,7 @@ export default function Navbar() {
 
     return (
         <>
-            <header className='sticky px-4 top-0 h-16 z-10 flex justify-center backdrop-blur'>
+            <header className='sticky px-4 top-0 h-16 z-10 flex justify-center backdrop-blur-md'>
                 <div className="flex w-full items-center justify-between md:max-w-screen-xl">
                     <Link href={'/'} className='flex items-center space-x-3'>
                         <Image
@@ -25,7 +25,7 @@ export default function Navbar() {
                     </Link>
                     <nav className="hidden sm:block">
                         {routes.map((route) => (
-                            <Link key={route.title} className='px-2 duration-100 text-gray-400 hover:font-bold hover:text-white hover:scale-105 ' href={route.link}>{route.title}</Link>
+                            <Link key={route.title} className='px-2 duration-100 hover:font-bold hover:scale-105 ' href={route.link}>{route.title}</Link>
                         ))}
                     </nav>
                     <div className="flex text-white items-center space-x-2">
