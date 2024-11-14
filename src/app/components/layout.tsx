@@ -1,7 +1,7 @@
-import React from 'react';
 import Navbar from '@/components/Navbar';
 import { docsConfig } from '@/components/config/docs';
 import { DocsSidebarNav } from '@/components/side-bar';
+import Footer from '@/components/Footer';
 
 
 export default ({
@@ -21,6 +21,7 @@ export default ({
                         <div>{children}</div>
                     </div>
                 </div>
+                <Footer />
             </div>
         </>
     );
