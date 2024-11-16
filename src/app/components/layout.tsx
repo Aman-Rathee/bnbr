@@ -4,11 +4,11 @@ import { DocsSidebarNav } from '@/components/side-bar';
 import Footer from '@/components/Footer';
 
 
-export default ({
+export default function ComponentsLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
-}>) => {
+}>) {
     return (
         <>
             <div>

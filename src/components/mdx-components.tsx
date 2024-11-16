@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils"
 import ComponentPreview from "./component-preview"
 import { CopyButton } from "@/components/copy-button"
 import { ComponentSource } from "@/components/component-source"
+import { CodeBlockWrapper } from "@/components/code-block-wrapper"
 
 const components = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
@@ -194,12 +195,6 @@ const components = {
       className="[&>h3]:step steps mb-12 ml-4 border-l border-border pl-8 [counter-reset:step]"
       {...props}
     />
-  ),
-  FrameworkDocs: ({
-    className,
-    ...props
-  }: React.ComponentProps<typeof FrameworkDocs>) => (
-    <FrameworkDocs className={cn(className)} {...props} />
   ),
   Link: ({ className, ...props }: React.ComponentProps<typeof Link>) => (
     <Link

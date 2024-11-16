@@ -13,15 +13,15 @@ interface cardProps {
 function Marquee({ cardsData, className }: { cardsData: cardProps[], className: string }) {
     let [containerRef, { width }] = useMeasure()
     const xTranslation = useMotionValue(0);
-    let controls: AnimationPlaybackControls;
     let finalPosition = -width / 2 - cardsData.length;
     const fast_duration = 15;
     const slow_duration = 50;
     const [duration, setDuration] = useState(fast_duration)
     const [mustFinish, setMustFinish] = useState(false);
     const [rerender, setRerender] = useState(false);
-
+    
     useEffect(() => {
+        let controls: AnimationPlaybackControls;
         if (mustFinish) {
             controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
                 ease: 'linear',
@@ -42,7 +42,7 @@ function Marquee({ cardsData, className }: { cardsData: cardProps[], className: 
         }
 
         return () => controls && controls.stop();
-    }, [xTranslation, width, duration, rerender])
+    }, [xTranslation, width, duration, rerender, finalPosition, mustFinish])
 
     return (
         <div className={cn('relative w-11/12 mx-auto overflow-hidden h-80', className)}>
