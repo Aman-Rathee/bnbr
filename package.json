@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "build:registry && next build",
-    "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./src/scripts/build-registry.mts && prettier --loglevel silent --write \"registry/**/*.{ts,tsx,mdx}\" --cache",
+    "build": "npm run build:registry && next build",
+    "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./src/scripts/build-registry.mts",
     "start": "next start",
     "lint": "next lint"
   },
