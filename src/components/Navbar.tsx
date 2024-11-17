@@ -29,7 +29,6 @@ export default function Navbar() {
                         ))}
                     </nav>
                     <div className="flex text-white items-center space-x-2">
-                        <Link className='px-2 duration-300 hover:opacity-60' href={'https://github.com/Aman-Rathee'} target='_blank'>Github</Link>
                         <Link className='px-2 duration-300 hover:opacity-60' href={'https://x.com/AmnRathee'} target='_blank'>Twitter</Link>
                         <MobileNav routes={routes} />
                     </div>
