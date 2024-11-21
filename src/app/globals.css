@@ -3,63 +3,110 @@
 @tailwind utilities;
 
 :root {
-    --offset: 2px;
-    --border-color: 49 49 53;
+  /* --border-color: 49 49 53; */
 }
 
-body {
-    background-color: black;
-    color: white;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 72.22% 50.59%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+
+    --offset: 2px;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+    --border: 240 3.7% 15.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+    text-rendering: optimizeLegibility;
+  }
 }
 
 @layer utilities {
-    .step {
-        counter-increment: step;
-    }
+  .step {
+    counter-increment: step;
+  }
 
-    .step:before {
-        @apply absolute w-9 bg-border h-9 rounded-full font-mono font-medium text-center text-base inline-flex items-center justify-center -indent-px border-4 border-black;
-        @apply ml-[-50px] mt-[-4px];
-        content: counter(step);
-    }
+  .step:before {
+    @apply absolute w-9 bg-border h-9 rounded-full font-mono font-medium text-center text-base inline-flex items-center justify-center -indent-px border-4 border-black;
+    @apply ml-[-50px] mt-[-4px];
+    content: counter(step);
+  }
 
-    .scrollbar-none::-webkit-scrollbar {
-        scrollbar-width: none;
-    }
+  .scrollbar-none::-webkit-scrollbar {
+    scrollbar-width: none;
+  }
 
-    .scrollbar-primary::-webkit-scrollbar {
-        width: 5px;
-    }
+  .scrollbar-primary::-webkit-scrollbar {
+    width: 5px;
+  }
 
-    .scrollbar-primary::-webkit-scrollbar-thumb {
-        background: rgb(35, 35, 35);
-        border-radius: 100vh;
-    }
+  .scrollbar-primary::-webkit-scrollbar-thumb {
+    background: rgb(35, 35, 35);
+    border-radius: 100vh;
+  }
 
-    .scrollbar-secondary::-webkit-scrollbar {
-        width: 0%;
-    }
+  .scrollbar-secondary::-webkit-scrollbar {
+    width: 0%;
+  }
 
-    .scrollbar-secondary:hover::-webkit-scrollbar {
-        width: 5px;
-    }
+  .scrollbar-secondary:hover::-webkit-scrollbar {
+    width: 5px;
+  }
 
-    .scrollbar-secondary::-webkit-scrollbar-thumb {
-        background: rgb(35, 35, 35);
-        border-radius: 100vh;
-    }
+  .scrollbar-secondary::-webkit-scrollbar-thumb {
+    background: rgb(35, 35, 35);
+    border-radius: 100vh;
+  }
 
-    .animated-border::before {
-        background: radial-gradient(red, transparent 70%);
-        top: calc(0px + var(--offset));
-        left: calc(0px + var(--offset));
-        @apply absolute content-[''] w-[50%] rounded-full aspect-square z-[-2] animate-border-spin
-    }
+  .animated-border::before {
+    background: radial-gradient(red, transparent 70%);
+    top: calc(0px + var(--offset));
+    left: calc(0px + var(--offset));
+    @apply absolute content-[''] w-[50%] rounded-full aspect-square z-[-2] animate-border-spin;
+  }
 
-    .animated-border::after {
-        inset: var(--offset);
-        height: calc(100% -2 * var(--offset));
-        width: calc(100% -2 * var(--offset));
-        @apply absolute content-[''] bg-[inherit] rounded-[inherit] z-[-1]
-    }
+  .animated-border::after {
+    inset: var(--offset);
+    height: calc(100% -2 * var(--offset));
+    width: calc(100% -2 * var(--offset));
+    @apply absolute content-[''] bg-[inherit] rounded-[inherit] z-[-1];
+  }
 }
