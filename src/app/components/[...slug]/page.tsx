@@ -56,7 +56,7 @@ export default function DocPage({ params }: DocsPageProps) {
                             {doc.title}
                         </h1>
                         {doc.description && (
-                            <p className="text-base pt-1 text-white/50">
+                            <p className="text-base pt-1 text-muted-foreground">
                                 {doc.description}
                             </p>
                         )}

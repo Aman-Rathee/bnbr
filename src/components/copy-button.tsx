@@ -33,7 +33,7 @@ export function CopyButton({ value, className, ...props }: CopyButtonProps) {
 
     return (
         <Button
-            className={cn("relative z-10 px-1 py-1 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-300 bg-transparent", className)}
+            className={cn("relative px-1 py-1 text-muted-foreground hover:bg-muted bg-transparent", className)}
             onClick={() => {
                 copyToClipboardWithMeta(value)
                 setHasCopied(true)
