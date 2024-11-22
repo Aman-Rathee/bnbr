@@ -48,10 +48,10 @@ function Page() {
                 className="transition duration-300 blur-0 aspect-video rounded-md group-hover:scale-105"
               />
             </div>
-            <p className="text-xl font-bold mt-4 mb-2 text-neutral-100 ">
+            <p className="text-xl font-bold mt-4 mb-2 text-primary">
               {component.title}
             </p>
-            <p className="mt-2 text-sm font-normal text-neutral-300 ">
+            <p className="mt-2 text-sm font-normal text-muted-foreground ">
               {component.description}
             </p>
           </Link>
