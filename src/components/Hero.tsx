@@ -16,8 +16,8 @@ const Hero = () => {
 
     return (
         <>
-            <div className="bg-black text-white">
-                <main className="container mx-auto px-4 py-16 md:py-32">
+            <div className="">
+                <main className="container mx-auto px-8 py-16 md:py-32">
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4, delay: 0.2 }}
-                        className="text-xl text-center text-gray-400 mb-12"
+                        className="text-xl text-center text-muted-foreground mb-12"
                     >
                         Copy and paste beautifully animated components into your website, styled with Tailwind CSS and Framer Motion for a seamless user experience.
                     </motion.p>
@@ -51,7 +51,7 @@ const Hero = () => {
                         <Link
                             href="https://x.com/AmnRathee"
                             target="_blank"
-                            className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-violet-500 transition-colors"
+                            className="border border-border px-6 py-3 rounded-full font-semibold hover:bg-foreground hover:text-violet-500 transition-colors"
                         >
                             Follow on X
                         </Link>
@@ -64,11 +64,11 @@ const Hero = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-white bg-opacity-10 p-6 rounded-lg"
+                                className="bg-card-foreground/10 p-6 rounded-lg"
                             >
-                                <div className="text-purple-400 mb-4">{feature.icon}</div>
-                                <h3 className="text-xl text-purple-200 font-semibold mb-2">{feature.title}</h3>
-                                <p className="text-gray-400">{feature.description}</p>
+                                <div className="text-purple-500 mb-4">{feature.icon}</div>
+                                <h3 className="text-xl text-muted-foreground font-semibold mb-2">{feature.title}</h3>
+                                <p className="text-muted-foreground">{feature.description}</p>
                             </motion.div>
                         ))}
                     </div>

@@ -31,7 +31,7 @@ function Footer() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4, delay: 0.1 }}
-                            className='leading-8 text-base text-gray-400 font-bold'>
+                            className='leading-8 text-base text-muted-foreground font-bold'>
                             <div className=''>Built by <Link className='underline text-blue-600' href={'https://x.com/AmnRathee'} target='_blank'>Aman Rathee</Link></div>
                             <a className='' href='mailto:ratheeaman65@gmail.com'>Contact</a>
                         </motion.div>

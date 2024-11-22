@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 import MobileNav from './mobile-nav';
+import { ThemeToggle } from './theme-toggle';
 
 export default function Navbar() {
 
@@ -25,11 +26,12 @@ export default function Navbar() {
                     </Link>
                     <nav className="hidden sm:block">
                         {routes.map((route) => (
-                            <Link key={route.title} className='px-2 duration-100 hover:font-bold hover:scale-105 ' href={route.link}>{route.title}</Link>
+                            <Link key={route.title} className='px-2 duration-200 hover:font-bold hover:scale-105 ' href={route.link}>{route.title}</Link>
                         ))}
                     </nav>
-                    <div className="flex text-white items-center space-x-2">
-                        <Link className='px-2 duration-300 hover:opacity-60' href={'https://x.com/AmnRathee'} target='_blank'>Twitter</Link>
+                    <div className="flex items-center space-x-2">
+                        <Link className='px-2 duration-200 hover:opacity-60' href={'https://x.com/AmnRathee'} target='_blank'>Twitter</Link>
+                        <ThemeToggle />
                         <MobileNav routes={routes} />
                     </div>
                 </div>
