@@ -19,7 +19,7 @@ function Marquee({ cardsData, className }: { cardsData: cardProps[], className: 
     const [duration, setDuration] = useState(fast_duration)
     const [mustFinish, setMustFinish] = useState(false);
     const [rerender, setRerender] = useState(false);
-    
+
     useEffect(() => {
         let controls: AnimationPlaybackControls;
         if (mustFinish) {
@@ -45,14 +45,9 @@ function Marquee({ cardsData, className }: { cardsData: cardProps[], className: 
     }, [xTranslation, width, duration, rerender, finalPosition, mustFinish])
 
     return (
-        <div className={cn('relative w-11/12 mx-auto overflow-hidden h-80', className)}>
-            <h1 className='text-center text-4xl font-bold'>Heading</h1>
+        <div className={cn('relative w-full mx-auto overflow-hidden h-52', className)}>
             <div className='absolute inset-0 flex items-center'>
-                <div className='before:h-full before:w-44 before:z-[2] before:absolute before:bg-gradient-to-r before:from-black before:to-transparent before:top-0 before:left-0 after:h-full after:w-44 after:z-[2] after:absolute after:bg-gradient-to-l after:from-black after:to-transparent after:top-0 after:right-0'></div>
                 <motion.div
-                    className='flex gap-5'
-                    ref={containerRef}
-                    style={{ x: xTranslation }}
                     onHoverStart={() => {
                         setMustFinish(true)
                         setDuration(slow_duration)
@@ -61,10 +56,16 @@ function Marquee({ cardsData, className }: { cardsData: cardProps[], className: 
                         setMustFinish(true)
                         setDuration(fast_duration)
                     }}
-                >
-                    {[...cardsData, ...cardsData].map((card, index) => (
-                        <Card heading={card.heading} paragraph={card.paragraph} key={index} />
-                    ))}
+                    className='before:h-full before:w-44 before:z-[2] before:absolute before:bg-gradient-to-r before:from-white dark:before:from-black before:to-transparent before:top-0 before:left-0 after:h-full after:w-44 after:z-[2] after:absolute after:bg-gradient-to-l after:from-white dark:after:from-black after:to-transparent after:top-0 after:right-0'>
+                    <motion.div
+                        className='flex gap-5'
+                        ref={containerRef}
+                        style={{ x: xTranslation }}
+                    >
+                        {[...cardsData, ...cardsData].map((card, index) => (
+                            <Card heading={card.heading} paragraph={card.paragraph} key={index} />
+                        ))}
+                    </motion.div>
                 </motion.div>
             </div>
         </div>
@@ -75,9 +76,9 @@ function Marquee({ cardsData, className }: { cardsData: cardProps[], className: 
 function Card({ heading, paragraph }: cardProps) {
     return (
         <>
-            <motion.div className='w-56 p-5 bg-sky-950 rounded-lg'>
-                <h1 className='text-lg text-gray-200 font-bold'>{heading}</h1>
-                <p className='text-gray-300'>{paragraph}</p>
+            <motion.div className='w-56 h-52 p-5 bg-gray-300 dark:bg-zinc-900 border-2 border-gray-500 rounded-lg'>
+                <h1 className='text-lg text-gray-900 dark:text-gray-200 font-bold'>{heading}</h1>
+                <p className='text-gray-800 dark:text-gray-300'>{paragraph}</p>
             </motion.div>
         </>
     )
