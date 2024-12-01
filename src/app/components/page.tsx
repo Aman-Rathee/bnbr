@@ -26,6 +26,12 @@ const componentsDetail = [
     link: '/photos/marquee-animation.png',
     description: 'Infinite scrolling animation for showcasing content in a continuous flow.'
   },
+  {
+    title: "Shiny Button",
+    href: "/components/shiny-button",
+    link: '/photos/shiny-button.png',
+    description: 'Shiny button with a sleek animated glow.'
+  },
 ]
 
 function Page() {
