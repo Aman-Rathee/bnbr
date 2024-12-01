@@ -53,6 +53,11 @@ export const docsConfig: DocsConfig = {
           href: "/components/marquee-animation",
           items: [],
         },
+        {
+          title: "Shiny Button",
+          href: "/components/shiny-button",
+          items: [],
+        },
       ],
     },
   ]

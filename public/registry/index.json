@@ -31,5 +31,16 @@
       }
     ],
     "type": "components:ui"
+  },
+  {
+    "name": "shiny-button",
+    "dependencies": [],
+    "files": [
+      {
+        "path": "ui/shiny-button.tsx",
+        "type": "components:ui"
+      }
+    ],
+    "type": "components:ui"
   }
 ]

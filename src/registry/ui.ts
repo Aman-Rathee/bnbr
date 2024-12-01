@@ -19,4 +19,10 @@ export const ui: Registry = [
         dependencies: [],
         files: ["ui/marquee-animation.tsx"],
     },
+    {
+        name: "shiny-button",
+        type: "components:ui",
+        dependencies: [],
+        files: ["ui/shiny-button.tsx"],
+    },
 ]

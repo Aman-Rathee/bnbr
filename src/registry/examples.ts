@@ -37,4 +37,10 @@ export const examples: Registry = [
         registryDependencies: [""],
         files: ["example/marquee-animation-demo.tsx"],
     },
+    {
+        name: "shiny-button-demo",
+        type: "components:example",
+        registryDependencies: [""],
+        files: ["example/shiny-button-demo.tsx"],
+    },
 ]
