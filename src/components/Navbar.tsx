@@ -12,7 +12,7 @@ export default function Navbar() {
 
     return (
         <>
-            <header className='sticky px-4 top-0 h-16 z-10 flex justify-center backdrop-blur-md'>
+            <header className='sticky px-4 border-b top-0 h-16 z-10 flex justify-center backdrop-blur-md'>
                 <div className="flex w-full items-center justify-between md:max-w-screen-xl">
                     <Link href={'/'} className='flex items-center space-x-3'>
                         <Image
