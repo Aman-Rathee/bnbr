@@ -28,7 +28,8 @@ export async function generateStaticParams(): Promise<DocsPageProps["params"][]>
 }
 
 
-export function generateMetadata({ params }: DocsPageProps) {
+export async function generateMetadata(props: DocsPageProps) {
+    const params = await props.params;
     const doc = getDocFromParams({ params })
     // const doc = allDocs.find((doc) => doc._raw.flattenedPath === params.slug)
     if (!doc) {
@@ -41,7 +42,8 @@ export function generateMetadata({ params }: DocsPageProps) {
 }
 
 
-export default function DocPage({ params }: DocsPageProps) {
+export default async function DocPage(props: DocsPageProps) {
+    const params = await props.params;
     const doc = getDocFromParams({ params })
 
     if (!doc) notFound()

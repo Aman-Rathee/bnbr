@@ -15,7 +15,7 @@ interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export default function ComponentPreview({ name, description, children, className, hideCode = false, ...props }: ComponentPreviewProps) {
 
-    const Codes = React.Children.toArray(children) as React.ReactElement[]
+    const Codes = React.Children.toArray(children) as React.ReactElement<any>[]
     const Code = Codes[0]
 
     const Preview = React.useMemo(() => {
@@ -42,7 +42,7 @@ export default function ComponentPreview({ name, description, children, classNam
         ) {
             const [Button] = React.Children.toArray(
                 Code.props.children
-            ) as React.ReactElement[]
+            ) as React.ReactElement<any>[]
             return Button?.props?.value || Button?.props?.__rawString__ || null
         }
     }, [Code])
