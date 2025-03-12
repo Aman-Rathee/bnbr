@@ -25,7 +25,7 @@ export default function ComponentPreview({ name, description, children, classNam
             return (
                 <p className="text-sm">
                     Component{" "}
-                    <code className="relative rounded text-red-400">
+                    <code className="relative rounded-sm text-red-400">
                         {name}
                     </code>{" "}
                     not found in registry.

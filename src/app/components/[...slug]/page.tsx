@@ -3,7 +3,6 @@ import { allDocs } from 'contentlayer/generated'
 import { cn } from '@/lib/utils'
 import { notFound } from 'next/navigation'
 import { Mdx } from '@/components/mdx-components'
-import "@/styles/mdx.css"
 
 
 interface DocsPageProps {

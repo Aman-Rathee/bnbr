@@ -22,7 +22,7 @@ export default function MobileNav({ routes }: RoutesProp) {
         <>
             <nav className="sm:hidden">
                 <div className="flex items-center">
-                    <button onClick={toggleMenu} className="outline-none" aria-label='Open menu'>
+                    <button onClick={toggleMenu} className="outline-hidden" aria-label='Open menu'>
                         <Menu />
                     </button>
                 </div>
@@ -42,7 +42,7 @@ export default function MobileNav({ routes }: RoutesProp) {
                             <div className="flex items-center space-x-2">
                                 <Link className='px-2' href={'https://github.com/Aman-Rathee'} target='_blank'>Github</Link>
                                 <Link className='px-2' href={'https://x.com/AmnRathee'} target='_blank'>Twitter</Link>
-                                <button onClick={toggleMenu} className="outline-none pl-1" aria-label='Close menu'>
+                                <button onClick={toggleMenu} className="outline-hidden pl-1" aria-label='Close menu'>
                                     <X size={24} />
                                 </button>
                             </div>

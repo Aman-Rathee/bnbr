@@ -56,7 +56,7 @@ function Marquee({ cardsData, className }: { cardsData: cardProps[], className: 
                         setMustFinish(true)
                         setDuration(fast_duration)
                     }}
-                    className='before:h-full before:w-44 before:z-[2] before:absolute before:bg-gradient-to-r before:from-white dark:before:from-black before:to-transparent before:top-0 before:left-0 after:h-full after:w-44 after:z-[2] after:absolute after:bg-gradient-to-l after:from-white dark:after:from-black after:to-transparent after:top-0 after:right-0'>
+                    className='before:h-full before:w-44 before:z-2 before:absolute before:bg-linear-to-r before:from-white dark:before:from-black before:to-transparent before:top-0 before:left-0 after:h-full after:w-44 after:z-2 after:absolute after:bg-linear-to-l after:from-white dark:after:from-black after:to-transparent after:top-0 after:right-0'>
                     <motion.div
                         className='flex gap-5'
                         ref={containerRef}

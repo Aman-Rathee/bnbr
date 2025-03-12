@@ -4,9 +4,9 @@ function BgGradient({ children, className }: { children: React.ReactNode, classN
     return (
         <>
             <div className='relative p-[4px] max-w-sm group'>
-                <div className="absolute inset-0 rounded-3xl z-[1] bg-gradient-to-bl from-pink-500 to-purple-700"></div>
-                <div className="absolute bg-gradient-to-bl from-pink-500 to-purple-700 blur-3xl inset-0 z-0 opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
-                <div className={cn('relative z-[1] rounded-[22px] max-w-sm p-4 sm:p-10 bg-gray-300 dark:bg-zinc-800', className)}>
+                <div className="absolute inset-0 rounded-3xl z-1 bg-linear-to-bl from-pink-500 to-purple-700"></div>
+                <div className="absolute bg-linear-to-bl from-pink-500 to-purple-700 blur-3xl inset-0 z-0 opacity-0 group-hover:opacity-75 transition-opacity duration-300"></div>
+                <div className={cn('relative z-1 rounded-[22px] max-w-sm p-4 sm:p-10 bg-gray-300 dark:bg-zinc-800', className)}>
                     {children}
                 </div>
             </div>
