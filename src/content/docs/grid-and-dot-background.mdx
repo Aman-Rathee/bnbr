@@ -18,12 +18,9 @@ npm i mini-svg-data-uri
 
 Add the following code to your `tailwind.config.js` file:
 
-```js title="tailwind.config.js" {1-5}, {12-26}
+```js title="tailwind.config.js" {1-2}, {9-23}
 import svgToDataUri from "mini-svg-data-uri";
-// You'll notice it's using CommonJS require syntax instead of ES Modules import. The reason for this is that this utility is part of Tailwind's internal utilities which are primarily written in CommonJS format.
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -48,6 +45,14 @@ module.exports = {
 };
 ```
 
+**Note:** If you are using Tailwind CSS v4, you can still add a `tailwind.config.ts` file, but you must import it in your `globals.css` file like this:
+
+```css
+@config '../../tailwind.config.ts';
+```
+
+Match the path according to your project.
+
 </Steps>
 
 ## Examples
@@ -62,12 +67,9 @@ module.exports = {
 
 Add the following code to your `tailwind.config.js` file:
 
-```js title="tailwind.config.js" {1-5}, {12-26}
+```js title="tailwind.config.js" {1-2}, {9-23}
 import svgToDataUri from "mini-svg-data-uri";
-
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -103,12 +105,9 @@ module.exports = {
 
 Add the following code to your `tailwind.config.js` file:
 
-```js title="tailwind.config.js" {1-5}, {12-26}
+```js title="tailwind.config.js" {1-2}, {9-23}
 import svgToDataUri from "mini-svg-data-uri";
-
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
