@@ -7,7 +7,7 @@ function ShinyButton({ children, className, ...props }: { children: React.ReactN
     return (
         <>
             <motion.button
-                className={cn("px-5 py-2 rounded-md relative radial-gradient", className)}
+                className={cn("px-5 py-2 rounded-md relative cursor-pointer radial-gradient", className)}
                 initial={{ "--x": "100%", scale: 1 }}
                 animate={{ "--x": "-100%" }}
                 whileTap={{ scale: 0.90 }}
