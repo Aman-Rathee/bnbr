@@ -46,21 +46,17 @@ export default async function DocPage({ params }: DocsPageProps) {
 
     return (
         <>
-            <main className="relative py-6">
-                <div className="mx-auto w-full min-w-0">
-                    <div className="space-y-2">
-                        <h1 className={cn("scroll-m-20 text-3xl font-bold tracking-tight")}>
-                            {doc.title}
-                        </h1>
-                        {doc.description && (
-                            <p className="text-base pt-1 text-muted-foreground">
-                                {doc.description}
-                            </p>
-                        )}
-                    </div>
-                    <div className="pb-12 pt-8">
-                        <Mdx code={doc.body.code} />
-                    </div>
+            <main>
+                <h1 className={cn("scroll-m-20 text-3xl font-bold tracking-tight")}>
+                    {doc.title}
+                </h1>
+                {doc.description && (
+                    <p className="text-base pt-1 text-muted-foreground">
+                        {doc.description}
+                    </p>
+                )}
+                <div className="pb-12 pt-8">
+                    <Mdx code={doc.body.code} />
                 </div>
             </main>
         </>

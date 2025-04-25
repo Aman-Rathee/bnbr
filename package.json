@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "npm run build:registry && next build",
+    "build:docs": "contentlayer2 build",
     "build:registry": "tsx --tsconfig ./tsconfig.scripts.json ./src/scripts/build-registry.mts",
     "start": "next start",
     "lint": "next lint"

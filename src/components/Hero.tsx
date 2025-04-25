@@ -33,7 +33,7 @@ const Hero = () => {
                         transition={{ duration: 0.4, delay: 0.2 }}
                         className="text-xl text-center text-muted-foreground mb-12"
                     >
-                        Copy and paste beautifully animated components into your website, styled with Tailwind CSS and Framer Motion for a seamless user experience.
+                        Copy and paste beautifully animated components into your website, styled with Tailwind CSS and Motion for a seamless user experience.
                     </motion.p>
 
                     <motion.div

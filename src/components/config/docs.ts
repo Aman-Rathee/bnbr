@@ -21,16 +21,6 @@ export interface DocsConfig {
 export const docsConfig: DocsConfig = {
   sidebarNav: [
     {
-      title: "Follow for updates",
-      items: [
-        {
-          title: "X - @AmnRathee",
-          href: "https://x.com/AmnRathee",
-          items: [],
-        },
-      ]
-    },
-    {
       title: "Components",
       items: [
         {
