@@ -22,13 +22,13 @@ export function ThemeToggle() {
 
     return (
         <>
-            <div className="flex items-center hover:bg-foreground/10 cursor-pointer transition-colors rounded">
+            <div className="flex items-center hover:bg-foreground/10 transition-colors rounded">
                 {resolvedTheme === 'light' ? (
-                    <button className="cursor-pointer p-1.5" onClick={() => setTheme('dark')}>
+                    <button className="p-1.5" onClick={() => setTheme('dark')}>
                         <Moon className="h-5 w-5" />
                     </button>
                 ) : (
-                    <button className="cursor-pointer p-1.5" onClick={() => setTheme('light')}>
+                    <button className="p-1.5" onClick={() => setTheme('light')}>
                         <Sun className="h-5 w-5" />
                     </button>
                 )}

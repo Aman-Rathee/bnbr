@@ -14,15 +14,15 @@ export const ui: Registry = [
         files: ["ui/bg-gradient.tsx"],
     },
     {
-        name: "marquee-animation",
+        name: "MarqueeAnimation",
         type: "components:ui",
         dependencies: [],
         files: ["ui/marquee-animation.tsx"],
     },
     {
-        name: "shiny-button",
+        name: "ShinyEffect",
         type: "components:ui",
         dependencies: [],
-        files: ["ui/shiny-button.tsx"],
+        files: ["ui/shiny-effect.tsx"],
     },
 ]

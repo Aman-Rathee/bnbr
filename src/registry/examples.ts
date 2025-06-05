@@ -32,15 +32,15 @@ export const examples: Registry = [
         files: ["example/bg-gradient-demo.tsx"],
     },
     {
-        name: "marquee-animation-demo",
+        name: "MarqueeAnimationDemo",
         type: "components:example",
         registryDependencies: [""],
         files: ["example/marquee-animation-demo.tsx"],
     },
     {
-        name: "shiny-button-demo",
+        name: "ShinyEffectDemo",
         type: "components:example",
         registryDependencies: [""],
-        files: ["example/shiny-button-demo.tsx"],
+        files: ["example/shiny-effect-demo.tsx"],
     },
 ]

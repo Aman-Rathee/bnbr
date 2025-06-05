@@ -1,0 +1,67 @@
+---
+title: Shiny Effect
+description: Shiny Effect with a sleek animated glow.
+date: 2024-12-01
+---
+
+<ComponentPreview name="ShinyEffectDemo" description="Shiny Effect" />
+
+## Installation
+
+```bash
+npm i clsx tailwind-merge motion
+```
+
+<Steps>
+
+<Step>Add util file</Step>
+
+```ts title="lib/utils.ts"
+import { clsx, ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+```
+
+<Step>Copy and paste the code into your project.</Step>
+
+components/ShinyEffect.tsx
+
+<ComponentSource name="ShinyEffect" />
+
+<Step>Update the imports paths to match your project setup.</Step>
+
+<Step>Add the code in your css file</Step>
+
+```css title="global.css" {2-25}
+@layer components {
+  .linear-mask {
+    mask-image: linear-gradient(-75deg,
+        white calc(var(--x) + 15%),
+        transparent calc(var(--x) + 25%),
+        white 60%);
+    -webkit-mask-image: linear-gradient(-75deg,
+        white calc(var(--x) + 15%),
+        transparent calc(var(--x) + 25%),
+        white 60%);
+  }
+
+  .linear-overlay {
+     background-image: linear-gradient(-60deg,
+        rgba(255, 255, 255, 0.1) calc(var(--x) + 30%),
+        rgba(255, 255, 255, 0.781) calc(var(--x) + 45%),
+        rgba(255, 255, 255, 0.1) calc(var(--x) + 100%));
+    mask:
+      linear-gradient(black, black) content-box,
+      linear-gradient(black, black);
+    -webkit-mask:
+      linear-gradient(black, black) content-box,
+      linear-gradient(black, black);
+    mask-composite: exclude;
+  }
+}
+```
+
+</Steps>

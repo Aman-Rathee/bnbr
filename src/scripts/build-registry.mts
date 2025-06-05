@@ -83,35 +83,6 @@ export const Index: Record<string, any> = {
 }
 `
 
-    // ----------------------------------------------------------------------------
-    // Build registry/index.json.
-    // ----------------------------------------------------------------------------
-    const items = registry
-        .filter((item) => ["components:ui"].includes(item.type))
-        .map((item) => {
-            return {
-                ...item,
-                files: item.files?.map((_file) => {
-                    const file =
-                        typeof _file === "string"
-                            ? {
-                                path: _file,
-                                type: item.type,
-                            }
-                            : _file
-
-                    return file
-                }),
-            }
-        })
-    const registryJson = JSON.stringify(items, null, 2)
-    rimraf.sync(path.join(REGISTRY_PATH, "index.json"))
-    await fs.writeFile(
-        path.join(REGISTRY_PATH, "index.json"),
-        registryJson,
-        "utf8"
-    )
-
     // Write style index.
     rimraf.sync(path.join(process.cwd(), "__registry__/index.tsx"))
     await fs.writeFile(path.join(process.cwd(), "__registry__/index.tsx"), index)

@@ -44,8 +44,8 @@ export const docsConfig: DocsConfig = {
           items: [],
         },
         {
-          title: "Shiny Button",
-          href: "/components/shiny-button",
+          title: "Shiny Effect",
+          href: "/components/shiny-effect",
           items: [],
         },
       ],

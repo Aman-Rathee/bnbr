@@ -27,8 +27,8 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "marquee-animation": {
-      name: "marquee-animation",
+    "MarqueeAnimation": {
+      name: "MarqueeAnimation",
       type: "components:ui",
       registryDependencies: undefined,
       files: ["src/registry/bnbr/ui/marquee-animation.tsx"],
@@ -38,12 +38,12 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "shiny-button": {
-      name: "shiny-button",
+    "ShinyEffect": {
+      name: "ShinyEffect",
       type: "components:ui",
       registryDependencies: undefined,
-      files: ["src/registry/bnbr/ui/shiny-button.tsx"],
-      component: React.lazy(() => import("@/registry/bnbr/ui/shiny-button.tsx")),
+      files: ["src/registry/bnbr/ui/shiny-effect.tsx"],
+      component: React.lazy(() => import("@/registry/bnbr/ui/shiny-effect.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",
@@ -104,8 +104,8 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "marquee-animation-demo": {
-      name: "marquee-animation-demo",
+    "MarqueeAnimationDemo": {
+      name: "MarqueeAnimationDemo",
       type: "components:example",
       registryDependencies: [""],
       files: ["src/registry/bnbr/example/marquee-animation-demo.tsx"],
@@ -115,12 +115,12 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: []
     },
-    "shiny-button-demo": {
-      name: "shiny-button-demo",
+    "ShinyEffectDemo": {
+      name: "ShinyEffectDemo",
       type: "components:example",
       registryDependencies: [""],
-      files: ["src/registry/bnbr/example/shiny-button-demo.tsx"],
-      component: React.lazy(() => import("@/registry/bnbr/example/shiny-button-demo.tsx")),
+      files: ["src/registry/bnbr/example/shiny-effect-demo.tsx"],
+      component: React.lazy(() => import("@/registry/bnbr/example/shiny-effect-demo.tsx")),
       source: "",
       category: "undefined",
       subcategory: "undefined",

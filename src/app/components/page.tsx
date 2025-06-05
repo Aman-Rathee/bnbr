@@ -27,10 +27,10 @@ const componentsDetail = [
     description: 'Infinite scrolling animation for showcasing content in a continuous flow.'
   },
   {
-    title: "Shiny Button",
-    href: "/components/shiny-button",
-    link: '/photos/shiny-button.png',
-    description: 'Shiny button with a sleek animated glow.'
+    title: "Shiny Effect",
+    href: "/components/shiny-effect",
+    link: '/photos/shiny-effect.png',
+    description: 'Shiny effect with a sleek animated glow.'
   },
 ]
 
