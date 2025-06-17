@@ -37,8 +37,8 @@ const componentsDetail = [
 function Page() {
 
   return (
-    <div className='pt-10'>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-14 md:gap-5 lg:gap-10 items-start relative">
+    <div>
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3 items-start relative">
         {componentsDetail.map((component) => (
           <Link
             key={component.title}
